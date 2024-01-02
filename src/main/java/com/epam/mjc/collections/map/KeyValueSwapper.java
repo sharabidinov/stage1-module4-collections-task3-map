@@ -10,8 +10,10 @@ public class KeyValueSwapper {
         Map<String, Integer> map = new LinkedHashMap<>();
 
         for (int key : sourceMap.keySet()) {
-            String value = sourceMap.get(key);
-            map.put(value, key);
+            if (key >= 1 && key <= 7) {
+                String value = sourceMap.get(key);
+                map.put(value, key);
+            }
         }
 
         return map;
